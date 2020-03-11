@@ -12,7 +12,7 @@ export default function Info(props) {
 
     return (
         <div>
-            <span>{props.name}</span>
+            <span className="item-name">{props.name}</span>
             <ul>
                 {items}
             </ul>

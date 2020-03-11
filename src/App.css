@@ -1,16 +1,16 @@
 body{
-  background-color: #D2DBDD;
+  background-color: #f6f7f8;;
   margin: 0;
   width: 100%;
-height: 100%;
-    padding: 0;
-    background-color: #D2DBDD;
-    display: flex;
-    display: -webkit-flex;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .App {
@@ -35,6 +35,7 @@ height: 100%;
   margin-right: 15px;
   height: 100%;
   padding: 10px 0;
+  border: 1px solid #ddd;
 }
 
 
@@ -49,6 +50,8 @@ ul{
 .price{
   color: green;
   font-size: 22px;
+  margin-bottom: 10px;
+  display: inherit;
 }
 .card_overlay {
   display: flex;
@@ -90,4 +93,14 @@ ul{
   background-color: #fff;
   color: #48cf80;
   cursor: pointer;
+}
+
+.item-name{
+  display: inherit;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.compare-item{
+  opacity: 0.9;
 }
