@@ -6,11 +6,17 @@ import Image from './Image'
 export default function Card(props) {
 
     const [state, setState] = useState("compare");
-
+    
     return (
-        <div className="card" onClick={() => {setState(state === "compare" ? "remove":"compare")}}>
+        
+        <div className="card" onClick= {
+
+            () => {setState(state === "compare" ? "remove":"compare");
+            (state === "compare") ? props.compare(props.specifications):props.remove(props.specifications)}
             
-            <div class={`card_overlay ${state === "remove" ? "compare-item":""}`}><div class="compare">{state}</div></div>
+        }>
+            
+            <div className={`card_overlay ${state === "remove" ? "compare-item":""}`}><div className="compare">{state}</div></div>
 
             <Image src={image} info={props.specifications.name} test="../img/img.png"/>
 

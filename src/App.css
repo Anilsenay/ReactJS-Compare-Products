@@ -24,6 +24,7 @@ body{
   justify-content: center;
   -webkit-justify-content: center;
   max-width: 1080px;
+  margin-bottom: 50px;
 }
 .card {
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
@@ -103,4 +104,9 @@ ul{
 
 .compare-item{
   opacity: 0.9;
+}
+
+.compare-table{
+  width: 100%;
+  max-width: 100%;
 }

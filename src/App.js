@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Card from './components/Card'
+import CompareTable from './components/CompareTable'
 
 const computers = [
   {
@@ -29,16 +30,46 @@ const computers = [
   }
 ]
 
+
+
 function App() {
+
+  const [compareArray, setCompareArray] = useState([])
+
+  let setCompareState = (computer) => {
+
+    for(let i = 0; i < compareArray.length; i++){
+      if(computer.name === compareArray[i].name)
+        return null;
+    }
+    let newArray = [...compareArray, computer]
+    setCompareArray(newArray)
+
+  }
+
+  let removeFromArray = (computer) => {
+
+    let newArray = [...compareArray]
+
+    for(let i = 0; i < compareArray.length; i++){
+      if(computer.name === compareArray[i].name)
+        newArray.splice(i, 1)
+    }
+
+    setCompareArray(newArray)
+
+  }
+
   return (
     <div className="App">
       <h1>Compare Computers</h1>
       <div className="cards">
-        <Card specifications={computers[0]}/>
-        <Card specifications={computers[1]}/>
-        <Card specifications={computers[0]}/>
-        <Card specifications={computers[1]}/>
+        <Card specifications={computers[0]} compare={setCompareState} remove={removeFromArray}/>
+        <Card specifications={computers[1]} compare={setCompareState} remove={removeFromArray}/>
+        <Card specifications={computers[0]} compare={setCompareState} remove={removeFromArray}/>
+        <Card specifications={computers[1]} compare={setCompareState} remove={removeFromArray}/>
       </div>
+      <CompareTable compareItems={compareArray}/>
     </div>
   );
 }
