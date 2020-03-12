@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import image from '../img/img.png'
 import Info from './Info'
 import Image from './Image'
 
@@ -13,12 +12,12 @@ export default function Card(props) {
 
             () => {setState(state === "compare" ? "remove":"compare");
             (state === "compare") ? props.compare(props.specifications):props.remove(props.specifications)}
-            
+
         }>
             
             <div className={`card_overlay ${state === "remove" ? "compare-item":""}`}><div className="compare">{state}</div></div>
 
-            <Image src={image} info={props.specifications.name} test="../img/img.png"/>
+            <Image src={props.image} info={props.specifications.name}/>
 
             <Info name={props.specifications.name} specifications ={props.specifications.specifications} />
 

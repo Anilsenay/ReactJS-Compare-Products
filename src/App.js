@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './App.css';
 import Card from './components/Card'
 import CompareTable from './components/CompareTable'
+import image from './img/img.png'
+import image2 from './img/img2.png'
+import image3 from './img/img3.png'
+
 
 const computers = [
   {
@@ -132,10 +136,10 @@ function App() {
     <div className="App">
       <h1>Compare Computers</h1>
       <div className="cards">
-        <Card specifications={computers[0]} compare={setCompareState} remove={removeFromArray}/>
-        <Card specifications={computers[1]} compare={setCompareState} remove={removeFromArray}/>
-        <Card specifications={computers[2]} compare={setCompareState} remove={removeFromArray}/>
-        <Card specifications={computers[3]} compare={setCompareState} remove={removeFromArray}/>
+        <Card specifications={computers[0]} image={image} compare={setCompareState} remove={removeFromArray}/>
+        <Card specifications={computers[1]} image={image} compare={setCompareState} remove={removeFromArray}/>
+        <Card specifications={computers[2]} image={image2} compare={setCompareState} remove={removeFromArray}/>
+        <Card specifications={computers[3]} image={image3} compare={setCompareState} remove={removeFromArray}/>
       </div>
       <CompareTable compareItems={compareArray}/>
     </div>
