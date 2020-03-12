@@ -19,12 +19,12 @@ body{
 
 .cards{
   width: 100%;
-  display: flex;
-  display: -webkit-flex;
+  display: inline-flex  ;
   justify-content: center;
   -webkit-justify-content: center;
   max-width: 1080px;
   margin-bottom: 50px;
+  
 }
 .card {
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
@@ -47,6 +47,7 @@ li{
 ul{
   padding: 0 20px;
   text-align: left;
+  min-height: 130px;
 }
 .price{
   color: green;
@@ -107,6 +108,35 @@ ul{
 }
 
 .compare-table{
-  width: 100%;
+  width: 1080px;
   max-width: 100%;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.spec {
+  width: 5%;
+  text-align: left;
+  padding:20px 0 ;
+  padding-left: 40px;
+  background-color: #f9f9f9;
+  font-size: 16pt;
+  font-weight: 400;
+  border: 1px solid #eee;
+}
+.table-item-names{
+  font-size: 16pt;
+  font-weight: 400;
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px; 
+  border-bottom: 2px solid #dee2e6;
+}
+
+.columns{
+  width: 10%;
+  margin-right: 5px;
+  border: 1px solid #eee;
 }
